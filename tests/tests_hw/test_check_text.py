@@ -1,5 +1,7 @@
 from pages.demoqa import DemoQa
 from components.components import WebElement
+from pages.elements_page import ElementsPage
+
 
 # перейти на страницу 'https://demoqa.com/'
 # проверить что текст в подвале == ‘© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.’
@@ -8,9 +10,8 @@ def test_check_footer_text(browser):
     demo_qa_page.visit()
     text_element = WebElement(browser, "#app > footer > span")
 
-    expected_text = "© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED."
     print("\ntext from element: " + text_element.get_text().strip())  # для самопроверки
-    assert text_element.get_text().strip() == expected_text
+    assert text_element.get_text().strip() == "© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED."
 
 
 # перейти на страницу 'https://demoqa.com/'
@@ -28,3 +29,15 @@ def test_check_center_footer(browser):
     print("\ncenter text: " + center_text.get_text().strip()) # для самопроверки
     assert center_text.get_text().strip() == expected_text
 
+def test_page_elements(browser):
+    el_page = ElementsPage(browser)
+
+    el_page.visit()
+    assert el_page.text_elements.get_text() == "Please select an item from left to start practice."
+
+def test_page_element(browser):
+    el_page = ElementsPage(browser)
+    el_page.visit()
+    assert el_page.icon.exist()
+    assert el_page.btn_sidebar_first.exist()
+    assert el_page.btn_sidebar_first_textbox.exist()
