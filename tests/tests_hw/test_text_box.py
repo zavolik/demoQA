@@ -16,3 +16,5 @@ def test_text_box(browser):
 
     assert text_box_page.get_name() == result_name
     assert text_box_page.get_address() == result_address
+
+
