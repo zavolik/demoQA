@@ -27,6 +27,3 @@ def test_login_form(browser):
 
 # ElementClickInterceptedException - элемент еа странице не кликабельный, поэтому применяем click_force()
 # теперь тест работает!
-
-
-

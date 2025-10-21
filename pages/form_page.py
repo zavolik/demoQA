@@ -18,4 +18,6 @@ class FormPage(BasePage):
 
         self.hobbies_sports = WebElement(driver, '#hobbies-checkbox-1')
         self.current_address = WebElement(driver, '#currentAddress')
+        self.state = WebElement(driver, '#state > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
+        self.city = WebElement(driver, '#city > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
 
