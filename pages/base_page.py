@@ -1,4 +1,4 @@
-
+import logging
 
 class BasePage:
 
@@ -28,3 +28,10 @@ class BasePage:
 
     def refresh(self):
         self.driver.refresh()
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex) # обрабатываем ошибку и возвращаем False
+            return False

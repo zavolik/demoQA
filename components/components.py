@@ -20,6 +20,9 @@ class WebElement:
     def find_elements(self): # поиск элементов по неуникальному локатору
         return self.driver.find_elements(self.get_by_type(), self.locator)
 
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
     def exist(self):
         try:
             self.find_element()

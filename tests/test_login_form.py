@@ -27,3 +27,14 @@ def test_login_form(browser):
 
 # ElementClickInterceptedException - элемент еа странице не кликабельный, поэтому применяем click_force()
 # теперь тест работает!
+
+# как реализовать выбор страны на сайте (выпадающий список)
+def test_state(browser) :
+    form_page = FormPage(browser)
+    form_page.visit()
+    time.sleep (2)
+    form_page.btn_state.scroll_to_element()
+    form_page.btn_state.click()
+    form_page.btn_NCR.click()
+    time.sleep(2)
+

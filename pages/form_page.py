@@ -18,6 +18,7 @@ class FormPage(BasePage):
 
         self.hobbies_sports = WebElement(driver, '#hobbies-checkbox-1')
         self.current_address = WebElement(driver, '#currentAddress')
-        self.state = WebElement(driver, '#state > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
+        self.btn_state = WebElement(driver, '#state')
+        self.btn_NCR = WebElement(driver, "//*[contains(text(), 'NCR')]", 'xpath')
         self.city = WebElement(driver, '#city > div > div.css-1hwfws3 > div.css-1uccc91-singleValue')
 
