@@ -1,12 +1,12 @@
 from pages.modal_dialogs import ModalDialogs
 
-#
-# def test_modal_elements(browser):
-#     page_dialogs = ModalDialogs(browser)
-#     page_dialogs.visit()
-#
-#     assert page_dialogs.child_buttons.check_count_elements(count=5)
-#     # проверить, что кнопок подменю на странице 5 шт
+
+def test_modal_elements(browser):
+    page_dialogs = ModalDialogs(browser)
+    page_dialogs.visit()
+
+    assert page_dialogs.child_buttons.check_count_elements(count=5)
+    # проверить, что кнопок подменю на странице 5 шт
 
 def test_navigation_modal(browser):
     page_dialogs = ModalDialogs(browser)
